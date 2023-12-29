@@ -90,7 +90,6 @@ brew upgrade
 brew update
 brew tap caskroom/cask
 
-
 #############################################
 ### Generate ssh keys & add to ssh-agent
 ### See: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
@@ -145,7 +144,7 @@ for ((i=0; i<retries; i++)); do
           echo "GitHub ssh key added successfully!"
           break
       else
-			echo "Something went wrong. Enter your credentials and try again..."
+		echo "Something went wrong. Enter your credentials and try again..."
      		echo -n "Status code returned: "
      		echo $gh_status_code
       fi
@@ -161,30 +160,19 @@ done
 echo "Starting brew app install..."
 
 ### Window Management
-# Todo: Try Divvy and spectacles in the future
-brew cask install sizeup  # window manager
-
-# Start SizeUp at login
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
-
-# Don’t show the preferences window on next start
-defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
-
+brew install --cask moom
 
 ### Developer Tools
-brew cask install iterm2
-brew cask install dash
-brew install ispell
-
+# brew install --cask iterm2
+brew install --cask postman
 
 ### Development
-brew cask install docker
-brew install postgresql
-brew install redis
-
+brew install docker
+brew install docker-compose
+brew install --cask orbstack
 
 ### Command line tools - install new ones, update others to latest version
-brew install git  # upgrade to latest
+brew install git  
 brew install git-lfs # track large files in git https://github.com/git-lfs/git-lfs
 brew install wget
 brew install zsh # zshell
@@ -195,85 +183,28 @@ brew install grep --with-default-names
 brew install trash  # move to osx trash instead of rm
 brew install less
 
-
 ### Python
 brew install python
-brew install pyenv
-
-
-### Microcontrollers & Electronics
-brew install avrdude
-brew cask install arduino
-# Manually install teensyduino from:
-# https://www.pjrc.com/teensy/td_download.html
-
 
 ### Dev Editors 
-brew cask install visual-studio-code
-brew cask install pycharm
-### spacemacs github.com/syl20bnr/spacemacs
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-brew tap d12frosted/emacs-plus
-brew install emacs-plus --HEAD --with-natural-title-bars
-brew linkapps emacs-plus
-
+brew install --cask pycharm
 
 ### Writing
-brew cask install evernote
-brew cask install macdown
-brew cask install notion
-
-
-### Conferences, Blogging, Screencasts
-brew cask install deckset
-brew cask install ImageOptim  # for optimizing images
-brew cask install screenflow
-
+brew install --cask heptabase
 
 ### Productivity
-brew cask install wavebox
-brew cask install google-chrome
-brew cask install alfred
-brew cask install dropbox
-
-brew cask install timing  # time and project tracker
-brew cask install keycastr  # show key presses on screen (for gifs & screencasts)
-brew cask install betterzip
-brew cask install caffeine  # keep computer from sleeping
-brew cask install skitch  # app to annotate screenshots
-brew cask install muzzle
-brew cask install flux
-
+brew install --cask pushplaylabs-sidekick
+brew install --cask alfred
+brew install --cask keycastr  # show key presses on screen (for gifs & screencasts)
+brew install --cask chai      # keep computer from sleeping
 
 ### Keyboard & Mouse
-brew cask install karabiner-elements  # remap keys, emacs shortcuts
-brew cask install scroll-reverser  # allow natural scroll for trackpad, not for mouse
-
-
-### Quicklook plugins https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode # syntax highlighting in preview
-brew cask install qlstephen  # preview plaintext files without extension
-brew cask install qlmarkdown  # preview markdown files
-brew cask install quicklook-json  # preview json files
-brew cask install epubquicklook  # preview epubs, make nice icons
-brew cask install quicklook-csv  # preview csvs
-
 
 ### Chat / Video Conference
-brew cask install slack
-brew cask install microsoft-teams
-brew cask install zoomus
-brew cask install signal
-
-
-### Music and Video
-brew cask install marshallofsound-google-play-music-player
-brew cask install vlc
-
+brew install --cask microsoft-teams
 
 ### Run Brew Cleanup
 brew cleanup
-
 
 #############################################
 ### Fonts
@@ -310,15 +241,10 @@ echo "Is app store login complete.(y/n)? "
 read response
 if [ "$response" != "${response#[Yy]}" ]
 then
-	mas install 907364780  # Tomato One - Pomodoro timer
-	mas install 485812721  # Tweetdeck
-	mas install 668208984  # GIPHY Capture. The GIF Maker (For recording my screen as gif)
-	mas install 1351639930 # Gifski, convert videos to gifs
-	mas install 414030210  # Limechat, IRC app.
+	mas install 539883307  # LINE
 else
 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
 fi
-
 
 #############################################
 ### Install few global python packages
@@ -488,7 +414,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.mouse.plist MouseTwoFin
 defaults write ~/Library/Preferences/.GlobalPreferences.plist com.apple.mouse.scaling -float 3
 defaults write ~/Library/Preferences/.GlobalPreferences.plist com.apple.swipescrolldirection -boolean NO
 
-
 ###############################################################################
 # Mac App Store                                                               #
 ###############################################################################
@@ -509,14 +434,6 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
-###############################################################################
-# Google Chrome                                                               #
-###############################################################################
-
-# Disable the all too sensitive backswipe on trackpads
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-
-
 #############################################
 ### Install dotfiles repo, run link script
 #############################################
@@ -530,7 +447,6 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 # make symbolic links and change shell to zshell
 # ./makesymlinks.sh
 # upgrade_oh_my_zsh
-
 
 echo ""
 cecho "Done!" $cyan
