@@ -17,7 +17,7 @@ Some resources borrowed from:
 Open the terminal, then:
 
 ```sh
-bash -c "`curl -L https://`"
+bash -c "`curl -L https://raw.githubusercontent.com/ryota-vl/new-computer/master/setup.sh`"
 ```
 
 This command runs the following script:
