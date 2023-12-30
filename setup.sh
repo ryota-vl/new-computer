@@ -242,6 +242,7 @@ read response
 if [ "$response" != "${response#[Yy]}" ]
 then
 	mas install 539883307  # LINE
+        mas install 1352778147 # Bitwarden
 else
 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
 fi
