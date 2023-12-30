@@ -121,7 +121,9 @@ brew install python
 ### Dev Editors 
 brew install --cask pycharm
 brew install --cask webstorm
+brew install --cask goland
 brew install --cask clion
+brew install --cask rustrover
 brew install --cask visual-studio-code
 
 ## TODO LIST
@@ -140,12 +142,35 @@ brew install --cask pushplaylabs-sidekick
 brew install --cask alfred
 brew install --cask keycastr  # show key presses on screen (for gifs & screencasts)
 brew install --cask chai      # keep computer from sleeping
+brew install --cask hookmark
+brew install --cask dropover
+# brew install --cask vimac   # change to another name
+# brew install --cask paste
+# brew install --cask rize
+# brew install --cask kindle-classic
+
+### Network
+brew install --cask nordvpn
+brew install --cask proxyman
+brew install --cask openvpn-connect
+
+### Translate
+brew install --cask grammarly-desktop
+# brew install --cask openai-translator
 
 ### Keyboard & Mouse
 brew install --cask keyboard-maestro
 
 ### Chat / Video Conference
 brew install --cask microsoft-teams
+brew install --cask discord
+brew install --cask skype
+brew install --cask spotify
+# brew install --cask iina
+# brew install --cask infuse
+
+### Photo
+brew install --cask Eagle
 
 ### Run Brew Cleanup
 brew cleanup
@@ -188,6 +213,10 @@ then
 	mas install 539883307  # LINE
  	mas install 803453959  # SLACK
         mas install 1352778147 # Bitwarden
+        mas install 823766827  # Microsoft OneDrive
+        mas install 462062816  # Microsoft PowerPoint
+        mas install 462058435  # Microsoft Excel
+        mas install 462054704  # Microsoft Word
 else
 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
 fi
