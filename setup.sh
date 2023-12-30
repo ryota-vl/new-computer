@@ -215,15 +215,15 @@ brew cleanup
 
 echo "Installing fonts..."
 
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 
 ### programming fonts
-brew cask install font-fira-mono-for-powerline
-brew cask install font-fira-code
+brew install font-monaspace
+brew install font-fira-mono-for-powerline
+brew install font-fira-code
 
 ### SourceCodePro + Powerline + Awesome Regular (for powerlevel 9k terminal icons)
 cd ~/Library/Fonts && { curl -O 'https://github.com/Falkor/dotfiles/blob/master/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf?raw=true' ; cd -; }
-
 
 #############################################
 ### Installs from Mac App Store
@@ -260,7 +260,6 @@ pip3 install --upgrade pip
 pip3 install --user pylint
 pip3 install --user flake8
 
-
 #############################################
 ### Set OSX Preferences - Borrowed from https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 #############################################
@@ -268,7 +267,6 @@ pip3 install --user flake8
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
-
 
 ##################
 ### Finder, Dock, & Menu Items
@@ -439,19 +437,8 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 #############################################
-### Install dotfiles repo, run link script
+# Check Updates, Install 
 #############################################
-# TODO: 
-# clean up my personal repo to make it public
-# dotfiles for vs code, emacs, gitconfig, oh my zsh, etc. 
-# git clone git@github.com:nnja/dotfiles.git
-# cd dotfiles
-# fetch submodules for oh-my-zsh
-# git submodule init && git submodule update && git submodule status
-# make symbolic links and change shell to zshell
-# ./makesymlinks.sh
-# upgrade_oh_my_zsh
-
 echo ""
 cecho "Done!" $cyan
 echo ""
