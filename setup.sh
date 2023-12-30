@@ -88,7 +88,7 @@ fi
 # Latest brew, install brew cask
 brew upgrade
 brew update
-brew tap caskroom/cask
+brew tap homebrew/cask
 
 #############################################
 ### Generate ssh keys & add to ssh-agent
