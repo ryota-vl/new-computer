@@ -127,6 +127,7 @@ brew install --cask webstorm
 brew install --cask goland
 brew install --cask clion
 brew install --cask rustrover
+brew install --cask intellij-idea
 brew install --cask visual-studio-code
 
 ## TODO LIST
