@@ -117,6 +117,7 @@ brew install less
 
 ### Command 
 brew install awscli
+brew install terraform
 
 ### Python
 brew install python
