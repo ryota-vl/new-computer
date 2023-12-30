@@ -94,30 +94,42 @@ brew update
 ### See: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 #############################################
 
-echo "Generating ssh keys, adding to ssh-agent..."
-read -p 'Input email for ssh key: ' useremail
+# SET continue to false 
+CONTINUE=false
 
-echo "Use default ssh file location, enter a passphrase: "
-ssh-keygen -t rsa -b 4096 -C "$useremail"  # will prompt for password
-eval "$(ssh-agent -s)"
+echo """
+cecho "Do you want to generate ssh keys, adding to ssh-agent? (y/n)" $red
+read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  CONTINUE=true
+fi
 
-# Now that sshconfig is synced add key to ssh-agent and
-# store passphrase in keychain
-ssh-add -K ~/.ssh/id_rsa
+if ! $CONTINUE; then
+  echo "Generating ssh keys, adding to ssh-agent..."
+  read -p 'Input email for ssh key: ' useremail
 
-# If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+  echo "Use default ssh file location, enter a passphrase: "
+  ssh-keygen -t rsa -b 4096 -C "$useremail"  # will prompt for password
+  eval "$(ssh-agent -s)"
 
-if [ -e ~/.ssh/config ]
-then
-    echo "ssh config already exists. Skipping adding osx specific settings... "
-else
-	echo "Writing osx specific settings to ssh config... "
-   cat <<EOT >> ~/.ssh/config
-	Host *
-		AddKeysToAgent yes
-		UseKeychain yes
-		IdentityFile ~/.ssh/id_rsa
-EOT
+  # Now that sshconfig is synced add key to ssh-agent and
+  # store passphrase in keychain
+  ssh-add -K ~/.ssh/id_rsa
+
+  # If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+
+  if [ -e ~/.ssh/config ]
+  then
+      echo "ssh config already exists. Skipping adding osx specific settings... "
+  else
+	  echo "Writing osx specific settings to ssh config... "
+     cat <<EOT >> ~/.ssh/config
+	  Host *
+		  AddKeysToAgent yes
+		  UseKeychain yes
+		  IdentityFile ~/.ssh/id_rsa
+  EOT
+  fi
 fi
 
 #############################################
