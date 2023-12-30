@@ -173,6 +173,7 @@ brew install --cask postman
 brew install docker
 brew install docker-compose
 brew install --cask orbstack
+brew install minikube
 
 ### Command line tools - install new ones, update others to latest version
 brew install git  
