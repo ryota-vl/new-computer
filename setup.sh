@@ -121,13 +121,13 @@ if ! $CONTINUE; then
   then
       echo "ssh config already exists. Skipping adding osx specific settings... "
   else
-	  echo "Writing osx specific settings to ssh config... "
-     cat <<EOT >> ~/.ssh/config
-	  Host *
-		  AddKeysToAgent yes
-		  UseKeychain yes
-		  IdentityFile ~/.ssh/id_rsa
-  EOT
+      echo "Writing osx specific settings to ssh config... "
+      cat <<EOT >> ~/.ssh/config
+	   Host *
+	   AddKeysToAgent yes
+           UseKeychain yes
+	   IdentityFile ~/.ssh/id_rsa
+           EOT
   fi
 fi
 
