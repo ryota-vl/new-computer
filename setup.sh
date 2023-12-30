@@ -81,8 +81,8 @@ echo "Installing brew..."
 
 if test ! $(which brew)
 then
-	## Don't prompt for confirmation when installing homebrew
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+  ## Don't prompt for confirmation when installing homebrew
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
 fi
 
 # Latest brew, install brew cask
