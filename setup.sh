@@ -115,6 +115,9 @@ brew install grep --with-default-names
 brew install trash  # move to osx trash instead of rm
 brew install less
 
+### Command 
+brew install awscli
+
 ### Python
 brew install python
 
