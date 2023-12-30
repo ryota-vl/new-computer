@@ -6,16 +6,11 @@
 #| (_) \__ \>  <    | | | | \__ \ || (_| | | |
 # \___/|___/_/\_\   |_|_| |_|___/\__\__,_|_|_|
 
-
-echo "I  ❤️  🍎"
-echo "Mac OS Install Setup Script"
-echo "By Nina Zakharenko"
-echo "Follow me on twitter! https://twitter.com/nnja"
-
 # Some configs reused from:
 # https://github.com/ruyadorno/installme-osx/
 # https://gist.github.com/millermedeiros/6615994
 # https://gist.github.com/brandonb927/3195465/
+# https://github.com/nnja/new-computer/blob/master/setup.sh
 
 # Colorize
 
@@ -104,8 +99,9 @@ brew install --cask postman
 ### Development
 brew install docker
 brew install docker-compose
-brew install --cask orbstack
 brew install minikube
+brew install --cask orbstack
+brew install --cask devpod
 
 ### Command line tools - install new ones, update others to latest version
 brew install git  
@@ -124,6 +120,9 @@ brew install python
 
 ### Dev Editors 
 brew install --cask pycharm
+brew install --cask webstorm
+brew install --cask clion
+brew install --cask visual-studio-code
 
 ## TODO LIST
 brew install --cask todoist
@@ -131,6 +130,10 @@ brew install --cask todoist
 ### Writing
 brew install --cask heptabase
 brew install --cask typora
+brew install --cask sublime-text
+
+## Design
+brew install --cask xmind
 
 ### Productivity
 brew install --cask pushplaylabs-sidekick
@@ -139,6 +142,7 @@ brew install --cask keycastr  # show key presses on screen (for gifs & screencas
 brew install --cask chai      # keep computer from sleeping
 
 ### Keyboard & Mouse
+brew install --cask keyboard-maestro
 
 ### Chat / Video Conference
 brew install --cask microsoft-teams
