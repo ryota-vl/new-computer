@@ -252,7 +252,6 @@ then
 	mas install 539883307  # LINE
  	mas install 803453959  # SLACK
         mas install 1352778147 # Bitwarden
- 	mas install 1085114709 # Parallels Desktop
 else
 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
 fi
