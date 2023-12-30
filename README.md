@@ -17,7 +17,7 @@ Some resources borrowed from:
 Open the terminal, then:
 
 ```sh
-bash -c "`curl -L https://git.io/new-computer`"
+bash -c "`curl -L https://`"
 ```
 
 This command runs the following script:
