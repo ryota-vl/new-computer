@@ -193,6 +193,9 @@ brew install python
 ### Dev Editors 
 brew install --cask pycharm
 
+## TODO LIST
+brew install --cask todoist
+
 ### Writing
 brew install --cask heptabase
 brew install --cask typora
@@ -249,7 +252,6 @@ then
 	mas install 539883307  # LINE
  	mas install 803453959  # SLACK
         mas install 1352778147 # Bitwarden
-	mas install 585829637  # Todoist
  	mas install 1085114709 # Parallels Desktop
 else
 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
