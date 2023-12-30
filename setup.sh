@@ -194,6 +194,7 @@ brew install --cask pycharm
 
 ### Writing
 brew install --cask heptabase
+brew install --cask typora
 
 ### Productivity
 brew install --cask pushplaylabs-sidekick
@@ -245,7 +246,10 @@ read response
 if [ "$response" != "${response#[Yy]}" ]
 then
 	mas install 539883307  # LINE
+ 	mas install 803453959  # SLACK
         mas install 1352778147 # Bitwarden
+	mas install 585829637  # Todoist
+ 	mas install 1085114709 # Parallels Desktop
 else
 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
 fi
