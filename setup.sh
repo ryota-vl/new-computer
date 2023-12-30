@@ -94,10 +94,9 @@ brew update
 ### See: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 #############################################
 
-# SET continue to false 
 CONTINUE=false
 
-echo """
+echo ""
 cecho "Do you want to generate ssh keys, adding to ssh-agent? (y/n)" $red
 read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
