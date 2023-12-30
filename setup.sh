@@ -116,19 +116,12 @@ if ! $CONTINUE; then
   ssh-add -K ~/.ssh/id_rsa
 
   # If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
-
   if [ -e ~/.ssh/config ]
   then
       echo "ssh config already exists. Skipping adding osx specific settings... "
   else
       echo "Writing osx specific settings to ssh config... "
-      cat <<EOT >> ~/.ssh/config
-	   Host *
-	   AddKeysToAgent yes
-           UseKeychain yes
-	   IdentityFile ~/.ssh/id_rsa
-           EOT
-  fi
+   fi
 fi
 
 #############################################
