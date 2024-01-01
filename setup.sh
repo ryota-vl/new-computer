@@ -377,7 +377,7 @@ killall mds
 
 # Disable “natural” (Lion-style) scrolling
 # Uncomment if you don't use scroll reverser
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
+# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
@@ -394,7 +394,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.mouse.plist MouseOneFin
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse.plist MouseTwoFingerDoubleTapGesture -int 3
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse.plist MouseTwoFingerHorizSwipeGesture -int 2
 defaults write ~/Library/Preferences/.GlobalPreferences.plist com.apple.mouse.scaling -float 3
-defaults write ~/Library/Preferences/.GlobalPreferences.plist com.apple.swipescrolldirection -boolean NO
+defaults write ~/Library/Preferences/.GlobalPreferences.plist com.apple.swipescrolldirection -boolean YES
 
 ###############################################################################
 # Mac App Store                                                               #
