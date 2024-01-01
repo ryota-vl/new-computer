@@ -179,7 +179,7 @@ brew install --cask spotify
 # brew install --cask infuse
 
 ### Photo
-brew install --cask Eagle
+
 
 ### Run Brew Cleanup
 brew cleanup
@@ -377,7 +377,7 @@ killall mds
 
 # Disable “natural” (Lion-style) scrolling
 # Uncomment if you don't use scroll reverser
-# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
