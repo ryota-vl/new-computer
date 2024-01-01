@@ -79,6 +79,10 @@ then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
 fi
 
+# (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ryota-vl/.zprofile
+# eval "$(/opt/homebrew/bin/brew shellenv)" 
+
+
 # Latest brew, install brew cask
 brew upgrade
 brew update
