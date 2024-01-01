@@ -97,7 +97,7 @@ echo "Starting brew app install..."
 brew install --cask moom
 
 ### Developer Tools
-# brew install --cask iterm2
+brew install --cask iterm2
 brew install --cask postman
 
 ### Development
