@@ -253,6 +253,9 @@ osascript -e 'tell application "System Preferences" to quit'
 ### Finder, Dock, & Menu Items
 ##################
 
+# Pycharm Plugins: Vim
+defaults write -g ApplePressAndHoldEnabled 0
+
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
 
