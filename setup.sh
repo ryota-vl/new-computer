@@ -227,6 +227,7 @@ then
         mas install 462062816  # Microsoft PowerPoint
         mas install 462058435  # Microsoft Excel
         mas install 462054704  # Microsoft Word
+	mas install 1355679052 # Dropover - Easier Drag & Drop
 else
 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
 fi
