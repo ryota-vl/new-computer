@@ -127,6 +127,9 @@ brew install terraform
 ### Python
 brew install python
 
+### node.js
+brew install node
+
 ### Dev Editors 
 brew install --cask pycharm
 brew install --cask webstorm
