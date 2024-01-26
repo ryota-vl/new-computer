@@ -157,6 +157,7 @@ brew install --cask keycastr  # show key presses on screen (for gifs & screencas
 brew install --cask chai      # keep computer from sleeping
 brew install --cask hookmark
 brew install --cask dropover
+brew install --cask google-chrome
 # brew install --cask vimac   # change to another name
 # brew install --cask paste
 # brew install --cask rize
