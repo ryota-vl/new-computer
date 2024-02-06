@@ -138,6 +138,7 @@ brew install --cask clion
 brew install --cask rustrover
 brew install --cask intellij-idea
 brew install --cask visual-studio-code
+brew install --cask devtoys
 
 ## TODO LIST
 brew install --cask todoist
