@@ -126,6 +126,7 @@ brew install terraform
 
 ### Python
 brew install python
+brew install geckodriver
 
 ### node.js
 brew install node
@@ -159,6 +160,7 @@ brew install --cask chai      # keep computer from sleeping
 brew install --cask hookmark
 brew install --cask dropover
 brew install --cask google-chrome
+brew install --cask firefox
 # brew install --cask vimac   # change to another name
 # brew install --cask paste
 # brew install --cask rize
