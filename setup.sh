@@ -128,6 +128,8 @@ brew install act # run github action on local
 ### Python
 brew install python
 brew install geckodriver
+brew install pipx
+pipx ensurepath
 
 ### node.js
 brew install node
