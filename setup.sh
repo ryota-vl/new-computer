@@ -107,7 +107,7 @@ brew install minikube
 brew install --cask orbstack
 brew install --cask devpod
 
-### Command line tools - install new ones, update others to latest version
+### Command line tools - install new ones, update others to the latest version
 brew install git  
 brew install git-lfs # track large files in git https://github.com/git-lfs/git-lfs
 brew install wget
@@ -168,6 +168,7 @@ brew install --cask firefox
 # brew install --cask paste
 # brew install --cask rize
 # brew install --cask kindle-classic
+brew install chezmoi
 
 ### Network
 brew install --cask nordvpn
