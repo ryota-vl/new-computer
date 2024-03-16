@@ -168,7 +168,8 @@ brew install --cask firefox
 # brew install --cask paste
 # brew install --cask rize
 # brew install --cask kindle-classic
-brew install chezmoi
+brew install chezmoi # dotfile management tool
+brew install --cask applite # brew management tool
 
 ### Network
 brew install --cask nordvpn
