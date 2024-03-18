@@ -191,8 +191,8 @@ brew install --cask spotify
 # brew install --cask iina
 # brew install --cask infuse
 
-### Photo
-
+### Meeting/Note Managment Tool
+# Superpowered 
 
 ### Run Brew Cleanup
 brew cleanup
