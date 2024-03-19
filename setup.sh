@@ -240,6 +240,7 @@ then
         mas install 462058435  # Microsoft Excel
         mas install 462054704  # Microsoft Word
 	mas install 1355679052 # Dropover - Easier Drag & Drop
+        mas install 497799835  # Xcode
 else
 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
 fi
