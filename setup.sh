@@ -193,6 +193,7 @@ brew install --cask spotify
 
 ### Meeting/Note Managment Tool
 # Superpowered 
+brew install minikube
 
 ### Run Brew Cleanup
 brew cleanup
