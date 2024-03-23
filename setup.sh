@@ -123,7 +123,8 @@ brew install jq
 ### Command 
 brew install awscli
 brew install terraform
-brew install act # run github action on local
+# brew install act # run github action on local
+brew install telnet 
 
 ### Python
 brew install python
