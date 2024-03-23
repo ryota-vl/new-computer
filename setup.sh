@@ -164,6 +164,7 @@ brew install --cask hookmark
 brew install --cask dropover
 brew install --cask google-chrome
 brew install --cask firefox
+brew install --cask arc
 # brew install --cask vimac   # change to another name
 # brew install --cask paste
 # brew install --cask rize
